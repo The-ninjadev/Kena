@@ -1,0 +1,1467 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+
+
+:root {
+    --color-black: #05080E;
+    --color-white: #F9FAFA;
+    --color-blue: #2B81C2;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    transition: .2s;
+   
+}
+
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+}
+html::-webkit-scrollbar {
+    width: .5rem;
+    
+}
+html::-webkit-scrollbar-track {
+     background-color: var(--color-white);
+}
+html::-webkit-scrollbar-thumb {
+    background: var(--color-blue);
+    border: 1px solid var(--color-white);
+    border-radius: 10px;
+    
+}
+
+
+/*==================== BASE ====================*/
+body {
+    background: var(--color-black);
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+    color: var(--color-black);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+section, footer {
+    padding: 2rem 10%;
+}
+
+/*==================== LAYOUT/ HEADER ====================*/
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;   
+    display: flex;
+    padding: 1rem 10%;
+    align-items: center;
+    z-index: 10000;
+}
+
+.logo {
+    width: 10rem;
+    height: 100%;
+    margin-right: auto;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar li a {
+    color: var(--color-white);
+    text-transform: uppercase;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    padding: 5px 0;
+    position: relative;
+}
+.navbar li a:hover {
+    color: var(--color-blue);
+    transition: .4s ease;
+}
+.navbar li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    border-radius: 10%;
+    background: var(--color-blue);
+}
+.navbar li a:hover::before {
+    width: 75%;
+    transition: .4s ease;
+}
+
+
+/*==================== LAYOUT/ HEADER ====================*/
+
+.activeH {
+    background: var(--color-black);
+    box-shadow: 4px 0px 8px #05080E;
+
+}
+#menu-btn {
+    display: none;
+}
+#close-navbar {
+    display: none;
+}
+
+.home {
+    min-height: 100vh;
+    background-image: url('../images/Kena_BOS_GameArt\ 1\ \(1\).jpg');
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    background-position: bottom;
+   
+}
+
+
+
+.home-kena  {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+   
+}
+
+.home-kena .home-kena--logo {
+    width: 23rem;
+    height: 100%;
+    
+}
+
+.kena-presentation {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-white);
+   
+}
+
+/*
+.kena-presentation a {
+    padding: 20px 60px;
+    text-align: center;
+    color: var(--color-white);
+    text-transform: uppercase;
+    background-color: transparent;
+    border-top: 1px solid var(--color-white);
+    
+}
+*/
+
+
+.kena-presentation a {
+    position: relative;
+    display: inline-block;
+    padding: 20px 60px;
+    color: #fbf2f3;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.2s;
+    border-top: 1px solid var(--color-white);
+    text-align: center;
+    
+}
+
+
+.kena-presentation a div {
+    display: block;
+    position: absolute;
+    
+}
+
+.kena-presentation a div:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(90deg, transparent,  #fff);
+}
+.kena-presentation a:hover div:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+
+.kena-presentation a div:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(270deg, transparent,  #fff);
+}
+.kena-presentation a:hover div:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.kena-presentation a div:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height:100%;
+    background-image: linear-gradient(180deg, transparent,  #fff);
+}
+.kena-presentation a:hover div:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.kena-presentation a div:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height:100%;
+    background-image: linear-gradient(360deg, transparent,  #fff);
+}
+.kena-presentation a:hover div:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+.kena-presentation a:hover {
+    background-color: rgba(173, 174, 175, 0.171);
+    transition-delay: 1s;
+}
+
+.kena-gif {
+    width: auto;
+    height: 200px;
+}
+.kena-gif img {
+    width: 400px;
+    height: 100%;
+
+}
+
+
+.kena-presentation-area .buy-now {
+    margin-top: 2rem;
+    display: block;
+    padding: 20px 60px;
+    text-align: center;
+    color: var(--color-black);
+    text-transform: uppercase;
+    background-color:var(--color-white);
+    font-weight: 600;
+    border: 1px solid var(--color-white);
+}
+.buy-now:hover {
+    background-color: var(--color-blue);
+    transition: .4s ease;
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
+}
+
+.kena-presentation-area p {
+    color: var(--color-white);
+    text-align: center;
+    margin-top: .5rem;
+}
+
+
+
+
+
+/*================ NOTES ==============*/ 
+.section-notes {
+    background: var(--color-white);
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.notes-area  {
+    display: flex;
+}
+.box-notes {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 2rem;   
+    justify-content: center;
+}
+.box-notes:first-child {
+    padding-left: 0;
+}
+.box-notes span {
+    font-size: 2.4rem;
+    font-family: 'Architects Daughter', cursive;
+}
+.box-notes .info {
+    font-size: .8rem;
+    font-style: italic;
+}
+.box-notes img {
+    width: 130px;
+    object-fit: cover;
+    margin: .3rem 0  1.3rem;
+}
+.wing {
+    height: 18px;
+}
+.kena-png{
+    position: relative;
+    width: 390px;
+    height: 540px;
+    margin-top: 14rem;
+    object-fit: cover;  
+}
+
+/*================ EXPLORE ===============*/ 
+
+.section-ecplore {
+    background-image: url('../images/Background.svg');
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    height: calc(100vh + 200px);
+    object-fit: cover;
+    
+    
+}
+
+.content-area {
+    width: 500px;
+    height: 540px;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.content-area .tittle {
+    font-family: 'Architects Daughter', cursive;
+    color: #fbf2f3e5;
+    text-transform: capitalize;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    
+}
+
+.content-info p {
+    color: var(--color-white);
+    line-height: 24px;
+    font-size:  14px;
+    margin: 10px 0;
+}
+
+.content-footer {
+    display: flex;
+    color: var(--color-white);
+    font-size: 10px;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.content-footer .info {
+    width: 269px;
+    line-height: 14px;
+    margin-right: 3rem;
+   
+}
+
+.content-footer img{
+    width: 30px;
+    height: 40px;
+
+}
+
+.content-footer .calssification {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+.content-footer .calssification img {
+    margin-right: 1rem;
+}
+
+
+/*===============GIFS AREA===============*/
+
+.explore-gif {
+    display: flex;
+    background: var(--color-white);  
+    border-bottom: 1px solid var(--color-white);
+}
+
+.gifs-area {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+    top: -120px;
+}
+
+.gifs-area .gifs {
+    flex: 1;
+    margin-right: 2rem;
+    text-align: center;
+}
+.gifs-area .gifs:last-child {
+    margin-right: 0;
+}
+
+.gifs-area .gifs img {
+    border: 1px solid var(--color-white);
+    box-shadow: 8px 10px 12px rgba(0, 0, 0, 0.445);
+    border-radius: 3px;
+}
+
+.gifs-area .gifs .tittle {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 2rem;
+    margin: 1.5rem 0;
+}
+
+.gifs-area .gifs {
+    font-size: 14px;
+    
+}
+
+/*============ ROT SECTION ============>*/
+
+.section-rot {
+    background-color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 90px;
+    
+}
+
+.rot-content {
+    width: 300px;
+    margin-top: -50px;
+    text-align: center;
+    
+}
+
+.rot-content h1{
+    font-family: 'Architects Daughter', cursive; ;
+    font-size: 2.2rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    margin: 1rem 0rem;
+
+}.rot-content p {
+    font-size: .7rem;
+    letter-spacing: 1px;
+    
+}
+.cor {
+    width: 480px;
+    margin-top: -100px;
+    object-fit: cover;
+}
+
+.img-rot2 {
+    margin-top: -150px;
+    margin-left: 100px;
+}
+
+/*=========== STANDARD EDITION ============*/
+
+.standard-edition {
+    background-image: url('../images/BowAbilitySceneImage3\ 1.jpg');
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.prot {
+    justify-content: flex-end;
+    
+}
+
+.prot2{
+    margin-top: 5rem;
+    width: 390px;
+    height: 300px;  
+   
+}
+
+.prot-areaimg {
+    border: 1px solid var(--color-white);
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.514);
+}
+
+.btn-edition {
+    padding: 20px 30px;
+    display: block;
+    background: var(--color-white);
+    border-top: 1px solid var(--color-white);
+    text-transform: uppercase;
+    color: var(--color-black);
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.btn-edition i {
+    color: rgb(150, 148, 148);
+}
+
+.protimg {
+    height: 200px;
+}
+.protimg img {
+    height: 100%;
+
+}
+
+.buy-pc {
+    padding: 18px 30px;
+    display: block;
+    background: var(--color-white);
+    border-top: 1px solid var(--color-white);
+    text-transform: uppercase;
+    color: var(--color-black);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.514);
+    border: 1px solid var(--color-white);
+    
+}
+
+.buy-pc img{
+    width: 20px;
+    height: 27px;
+    object-fit: cover;
+    margin-right: .7rem;
+}
+.epic {
+    margin-bottom: 1.5rem;
+}
+
+.edition-info {
+    text-align: center;
+    color: var(--color-black);
+    margin-bottom: 2rem;
+}
+.edition-info .info1 {
+    font-weight: 700;
+}
+.edition-info .info2 {
+    font-weight: 500;
+}
+
+.ps i {
+    font-size: 20px;
+    margin-right: .7rem;
+}
+
+
+
+/*============= MERCH SECTION ============*/
+.merch {
+    background: var(--color-white);
+}
+
+.product-slider {
+    margin-top: 4rem;
+}
+.product-slider h1 {
+    font-family: 'Architects Daughter', cursive;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+.content-slide {
+    text-align: center;
+    margin-top: 1.2rem;
+    text-transform: capitalize;
+}
+.content-slide h3 {
+    font-weight: 600;
+}
+.image-slide img {
+    object-fit: cover;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #696868;
+    font-size: 10px;
+}
+
+/*============= LATETS NEWS ============*/
+
+.news {
+    background-color: var(--color-white);
+   
+}
+
+
+.news-area {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-area h1 {
+    font-family: 'Architects Daughter', cursive;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    
+}
+
+.card-news--area {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.card-news {
+    background-color: #e9e9e9;
+    width: 350px;
+    height: 500px;
+    margin-top: 2rem;
+}
+
+.content-news {
+    padding: 30px 30px;
+    
+}
+.content-news h3 {
+    font-size: 1.4rem;
+}
+
+.card-news .date {
+    color: #808081;
+    margin: 15px 0 30px;
+    font-size: .9rem;
+}
+
+.more-views {
+    width: 100%;
+    margin-top: 2rem;
+    display: inline-block;
+    text-align: center;
+    background-color: #05080E;
+    padding: 15px;
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+
+/*================ MAIL SECTION ==============*/
+
+.section-mail {
+    background-image: url(../images/mail-bg.jpg);
+    background-repeat: no-repeat !important;
+    background-size: cover;
+
+    min-height: 100vh;
+
+}
+
+
+.social-body{
+    display: flex;
+}
+
+
+.social-area {
+    
+    width: 500px;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.social-content {
+    text-align: center;
+}
+
+.social-content h3 {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    color: var(--color-white);
+}
+
+.social-content p {
+    color: var(--color-white);
+    font-size: .8rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.social-content input {
+    background: transparent;
+    border: 1px solid var(--color-white);
+    outline: none;
+    padding: 10px 22px;
+    color: rebeccapurple;
+    color: var(--color-white);
+    font-size: .8rem;
+}
+
+.social-content .mail {
+    width: 250px;
+   
+}
+.social-content input::placeholder {
+    color: var(--color-white);
+}
+
+.social-content input[type=submit] {
+    background: var(--color-white);
+    color: var(--color-black);
+    padding: 10px 25px;
+    margin-left: -5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.social-content input[type=submit]:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+    border: 1px solid var(--color-black);
+    transition: .4s ease;
+}
+form {
+    position: relative;
+    z-index: 1000;
+}
+form img {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    right: -3%;
+    top: -60px;
+    z-index: -999;
+
+}
+
+
+.social-midia {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.social-midia h3 {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: var(--color-white);
+    text-transform: capitalize;
+}
+
+.social {
+    justify-content: center;
+    display: flex;
+    margin-top: 2rem;
+}
+.social  a {
+    padding: 10px 15px;
+    border: 1px solid var(--color-white);
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.social  a i {
+    margin-right: 5px;
+}
+
+.twitter {
+    background: var(--color-white);
+    color: var(--color-black);
+}
+.twitter:hover {
+    border: 1px solid var(--color-black);
+    transition: .4s ease;
+    background: var(--color-black);
+    color: var(--color-white);
+    letter-spacing: 3px;
+}
+
+.instagram {
+    background: transparent;
+    color: var(--color-white);
+}
+.instagram:hover {
+    border: 1px solid var(--color-black);
+    transition: .4s ease;
+    background: var(--color-black);
+    color: var(--color-white);
+    letter-spacing: 3px;
+}
+
+
+
+
+
+
+.area-social--news {
+    margin-top: 4rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+
+
+.social-card {
+    background-color: var(--color-white);
+    margin-bottom: 2rem;
+    width: 380px;
+}
+
+.social-contentcard {
+    padding: 18px 38px;
+}
+.social-contentcard .info {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.social-contentcard .info i {
+    font-size: 22px;
+    margin-right: 8px;
+}
+
+
+.social-contentcard p {
+    margin: 12px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.social-btn {
+    width: 100%;
+    text-align: center;
+}
+
+.social-btn a {
+    display: inline-block;
+    padding: 18px 0;
+    background: var(--color-black);
+    width: 100%;
+    text-transform: uppercase;
+    color: var(--color-white);
+}
+
+
+/*============== FOOTER ==============*/
+
+.footer {
+    height: 350px;
+    display: flex;
+    align-items: center;
+    background-color: #151515;
+}
+.footer-area {
+    width: 100%;
+    display: flex;
+}
+
+.company {
+    width: 350px;
+    margin-right: 4rem;
+  
+}
+.company div{
+    color: #fbf2f3f8;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    
+}
+
+.company ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.company a {
+    display: inline-block;
+    color: #fbf2f3a6;
+    text-transform: capitalize;
+    padding: 10px 0;
+    font-size: .9rem;
+}
+.company a:hover {
+    color: #fbf2f3;
+}
+
+
+.social-media {
+    width: 100%;
+    text-align: center;
+}
+
+.social-media div {
+    color: #fbf2f3f8;
+    margin-bottom: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.social-media .icons {
+    display: flex;
+    justify-content: center;
+   
+}
+.social-media .icons i {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    
+   
+}
+.social-media .icons a {
+    font-size: 1.2rem;
+    
+    margin-right: 5px;
+    
+}
+
+.icons .fa-facebook-f {
+    color: #fbf2f3 ;
+    background-color: #0d5e94;
+}
+
+.icons .fa-twitter {
+    color: #fbf2f3 ;
+    background-color: #2a8aca;
+}
+
+.icons .fa-instagram {
+    color: #fbf2f3 ;
+    background-color: #da54bd;
+}
+
+.icons .fa-youtube {
+    color: #fbf2f3 ;
+    background-color: #ce1f1f;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----Media queries-----*/ 
+
+/*----Media queries 1200px-----*/ 
+@media (max-width: 1200px) {
+    
+    .header {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 3rem 2rem;
+    }
+
+
+
+
+    
+    .section-ecplore {
+        background-position: center;
+        
+    }
+    .content-area .tittle {
+        letter-spacing: 5px;
+        
+    }
+
+    .content-area .tittle {
+        font-size: 2.6rem;
+    }
+    .content-info p {
+        font-size: 1rem;
+        margin: 2rem 0;
+    }
+}
+
+
+
+/*----Media queries 991px-----*/ 
+@media (max-width: 960px) {
+
+    html {
+        font-size: 80%;
+       
+    }
+    /*==============NAVBAR MOBILE===========*/
+    .navbar {
+        position: fixed;
+        top: 0; left: -110%;
+        background:rgba(0, 0, 0, 0.884);
+        backdrop-filter: blur(35px);
+        z-index: 10000;
+        width: 30rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }   
+    .navbar ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .navbar ul li {
+        text-align: center;
+        margin: 1rem 0;
+    }
+    .navbar ul li a {
+        color: var(--color-white);
+        font-size: 2.5rem;
+    }
+
+    #menu-btn {
+        display: inline-block;
+        color: var(--color-white);
+        font-size: 1.9rem;
+    }    
+    #close-navbar {
+        position: absolute;
+        display: inline-block;
+        top: 1rem;
+        right:2rem;
+        font-size: 2rem;
+        color: var(--color-white);
+    }
+    .active {
+        left: 0;
+        box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.404);
+    }
+
+
+    .home-kena {
+        margin-top: 150px;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .kena-gif img {
+        width: auto;
+        height: 100%;
+    }
+    
+    .kena-png{
+        display: none; 
+    }
+
+
+
+    
+    .card-news--area {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card-news {
+        background-color: #e9e9e9;
+        width: 100%;
+        height: 750px;
+        margin-top: 2rem;
+    }
+
+    .card1 {
+        margin-right: 0;
+    }
+    .content-news {
+        padding: 20px 20px;
+        
+    }
+    .content-news h3 {
+        font-size: 2rem;
+    }
+
+    .card-news .date {
+        color: #808081;
+        margin: 15px 0 30px;
+        font-size: 1.4rem;
+    }
+
+    .content-news p {
+        font-size: 1.4rem;
+       
+    }
+
+
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*----Media queries 768px-----*/ 
+@media (max-width: 768px) {
+
+    html {
+        font-size: 70%;
+    }
+    .home-kena {
+        display: flex;
+        justify-content: center;  
+    }
+
+    .home-kena--logo {
+        width: 40rem;
+        height: 100%;
+    }
+
+    .kena-presentation-area {
+        margin: 2rem 0rem;
+    }
+
+
+    .section-notes {
+        height: auto;
+    }
+
+    .notes-area {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .box-notes {
+        margin: 2rem 0;
+        
+    }
+    .box-notes:first-child {
+        padding: 0 2rem;  
+    }
+
+    .box-notes span {
+        font-size: 4rem;
+    }
+    .box-notes .info {
+        font-size: 2rem;
+    }
+    .kena-png{
+        display: none; 
+    }
+
+
+    .section-ecplore {
+        background-position: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .content-area {
+        /* width: 300px; */
+        /* height: 340px; */
+        /* margin-top: 6rem; */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    .content-area .tittle {
+        font-size: 2.5rem;
+    }
+    .content-info p {
+        font-size: 1rem;
+        margin: 14px 0;
+    }
+
+
+
+
+
+
+
+
+
+
+    .gifs-area {
+        flex-direction: column;
+    }
+    .gifs-area .gifs {
+        margin-right: 0;
+        margin-bottom: 4rem;
+    }
+    .gifs-area .gifs:last-child {
+        margin-bottom: 4rem;
+    }
+    
+    .gifs-area .gifs .tittle {  
+        font-size: 3rem;
+        
+    }
+
+    .section-rot {
+        margin-top: -70px;
+    }
+
+    .rot-content {
+        margin-top: -50px;
+        text-align: center;
+    }
+    
+    .img-rot2 {
+        display: none;
+    }
+
+    .standard-edition {
+       display: flex;
+       justify-content: center;
+    }
+
+
+    /*============== STANDARD AREA =============*/
+    .edition-info {
+        color: var(--color-white);
+    }
+    
+ 
+
+    .card-news {
+        background-color: #e9e9e9;
+        width: 100%;
+        height: 650px;
+        margin-top: 2rem;
+    }
+    .card1 {
+        margin-right: 0;
+    }
+
+    
+    .content-news {
+        padding: 20px 20px;
+        
+    }
+    .content-news h3 {
+        font-size: 2.4rem;
+    }
+
+    .card-news .date {
+        color: #808081;
+        margin: 15px 0 30px;
+        font-size: 1.4rem;
+    }
+
+    .content-news p {
+        font-size: 2rem;
+    }
+
+
+
+
+    .social-content h3 {
+        font-size: 4rem;
+    }
+
+    .social-content p {
+        font-size: 1.3rem;
+    }
+    
+    
+
+
+    .social-card {
+        width: 100%;
+    }
+
+
+}  
+
+
+    
+    
+
+
+
+
+/*----Media queries 450px-----*/ 
+@media (max-width: 450px) {
+
+    html {
+        font-size: 58%;
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .content-area {
+        /* height: 340px; */
+        margin-top: 7rem; 
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+
+    .content-area .tittle {
+        font-size: 2.2rem;
+    }
+    .content-info p {
+        font-size: 1rem;
+        margin: 14px 0;
+    }
+
+    .content-footer {
+        display: block;
+    }
+
+    .content-footer .calssification {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 2rem;
+    }
+
+
+
+    /*================= ROT AREA =================*/
+    .rot-content {
+        width: auto;
+        margin: 0 .8rem;
+    }
+    .rot-content h1{
+        font-size: 3rem;
+    }
+    .rot-content p {
+        font-size: 1rem;
+    }
+
+    .cor {
+        display: none;
+    }
+
+
+    .prot2 {
+        margin-top: 5rem;
+        width: 330px; 
+        height: 300px;
+    }
+
+    form img {
+        position: static;
+       
+    }
+
+    .area-social--news {
+        margin-top: 18rem;
+        
+    }
+}
